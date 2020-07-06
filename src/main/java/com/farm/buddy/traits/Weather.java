@@ -1,6 +1,5 @@
 package com.farm.buddy.traits;
 
-import com.farm.buddy.service.impl.WeatherServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.core.io.ClassPathResource;
@@ -8,13 +7,12 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
 @Component
 public class Weather {
-    private final Logger logger = LogManager.getLogger(WeatherServiceImpl.class);
+    private final Logger logger = LogManager.getLogger(Weather.class);
 
     private int avgPrecipitation;
     private int avgEvapotranspiration;

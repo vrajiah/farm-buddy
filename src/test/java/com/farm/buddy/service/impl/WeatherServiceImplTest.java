@@ -24,7 +24,7 @@ class WeatherServiceImplTest {
             Mockito.doThrow(IOException.class).when(weather).setAvgPrecipitation(6);
             weatherService.getWeatherData();
         } catch (IOException ioe) {
-            Assert.assertTrue(ioe.getClass().getSimpleName().equals(IOException.class.getSimpleName()));
+            Assert.assertEquals(IOException.class.getSimpleName(), ioe.getClass().getSimpleName());
         }
     }
 }

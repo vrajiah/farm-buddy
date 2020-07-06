@@ -1,6 +1,7 @@
 # Farm Buddy
 [![Build Status](https://travis-ci.com/vrajiah/farm-buddy.svg?branch=master)](https://travis-ci.com/github/vrajiah/farm-buddy?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/vrajiah/farm-buddy/badge.svg?branch=master)](https://coveralls.io/github/vrajiah/farm-buddy?branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vrajiah_farm-buddy&metric=alert_status)](https://sonarcloud.io/dashboard?id=vrajiah_farm-buddy)
 
 ## About Farm Buddy
 This project contains a simple solution that allows Farmers to use water efficiently on their farms.

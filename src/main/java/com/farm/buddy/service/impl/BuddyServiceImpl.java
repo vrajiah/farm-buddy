@@ -111,7 +111,7 @@ public class BuddyServiceImpl implements BuddyService {
      */
     private int getRequiredWater(Weather weather, Soil soil, Crop crop) {
         int litres = (int) (((((weather.getAvgEvapotranspiration() * crop.getCropFactor())
-                + soil.getPercolation()) - (weather.getAvgPrecipitation() / 30)) / 10) * 442860) / 1000;
+                + soil.getPercolation()) - ((double)weather.getAvgPrecipitation() / 30)) / 10) * 442860) / 1000;
 
         double soilMoistureCover = (double) (100 - soil.getMoisture()) / 100;
         return (int) (litres * soilMoistureCover);

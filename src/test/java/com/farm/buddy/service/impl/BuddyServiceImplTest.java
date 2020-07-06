@@ -7,6 +7,7 @@ import com.farm.buddy.model.SoilType;
 import com.farm.buddy.service.BuddyService;
 import com.farm.buddy.service.WeatherService;
 import com.farm.buddy.traits.Weather;
+import com.farm.buddy.utils.BuddyErrors;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -39,7 +40,7 @@ class BuddyServiceImplTest {
 
         Report report = buddyService.predict(CropName.Paddy, MOBILE_NUMBER);
         Assert.assertEquals(67, report.getSoilMoisture());
-        String expectedMsg = "Water required for your " + CropName.Paddy + " field is 94 litres per day for an Acre";
+        String expectedMsg = "Water required for your " + CropName.Paddy + " field is 92 litres per day for an Acre";
         Assert.assertEquals(expectedMsg, report.getMessage());
         Assert.assertEquals(MOBILE_NUMBER, report.getMobile());
     }
@@ -56,7 +57,7 @@ class BuddyServiceImplTest {
 
         Report report = buddyService.predict(CropName.Wheat, MOBILE_NUMBER);
         Assert.assertEquals(25, report.getSoilMoisture());
-        String expectedMsg = "Water required for your " + CropName.Wheat + " field is 116 litres per day for an Acre";
+        String expectedMsg = "Water required for your " + CropName.Wheat + " field is 111 litres per day for an Acre";
         Assert.assertEquals(expectedMsg, report.getMessage());
         Assert.assertEquals(MOBILE_NUMBER, report.getMobile());
     }
@@ -73,7 +74,7 @@ class BuddyServiceImplTest {
         try {
             buddyService.predict(CropName.Wheat, MOBILE_NUMBER);
         } catch (InternalServerErrorException ise) {
-            Assert.assertTrue("FB-10002".equals(ise.getError().getCode()));
+            Assert.assertEquals(BuddyErrors.WEATHER_DATA_ERROR.getErrorCode(), ise.getError().getCode());
         } catch(Exception e) {
             Assert.assertTrue(false);
         }

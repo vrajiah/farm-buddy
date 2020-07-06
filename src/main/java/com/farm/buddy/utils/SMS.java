@@ -1,5 +1,8 @@
 package com.farm.buddy.utils;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -7,6 +10,8 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 public class SMS {
+    private final Logger logger = LogManager.getLogger(SMS.class);
+    private static final String UTF = "UTF-8";
     private String key;
 
     public SMS(String key) {
@@ -22,10 +27,10 @@ public class SMS {
         String sResult = "";
         try {
             // Construct data
-            String apiKey = "apikey=" + URLEncoder.encode(key, "UTF-8");
-            message = "&message=" + URLEncoder.encode(message, "UTF-8");
-            String sender = "&sender=" + URLEncoder.encode("TXTLCL", "UTF-8");
-            String numbers = "&numbers=" + URLEncoder.encode(number, "UTF-8");
+            String apiKey = "apikey=" + URLEncoder.encode(key, UTF);
+            message = "&message=" + URLEncoder.encode(message, UTF);
+            String sender = "&sender=" + URLEncoder.encode("TXTLCL", UTF);
+            String numbers = "&numbers=" + URLEncoder.encode(number, UTF);
 
             // Send data
             String data = "https://api.textlocal.in/send/?" + apiKey + numbers + message + sender;
@@ -42,7 +47,7 @@ public class SMS {
             }
             rd.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error in sending SMS", e);
         }
         return sResult;
     }
