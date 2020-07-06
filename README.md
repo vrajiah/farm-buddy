@@ -1,5 +1,6 @@
 # Farm Buddy
 [![Build Status](https://travis-ci.com/vrajiah/farm-buddy.svg?branch=master)](https://travis-ci.com/github/vrajiah/farm-buddy?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/vrajiah/farm-buddy/badge.svg?branch=master)](https://coveralls.io/github/vrajiah/farm-buddy?branch=master)
 
 ## About Farm Buddy
 This project contains a simple solution that allows Farmers to use water efficiently on their farms.
