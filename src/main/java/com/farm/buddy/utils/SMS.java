@@ -28,12 +28,12 @@ public class SMS {
         try {
             // Construct data
             String apiKey = "apikey=" + URLEncoder.encode(key, UTF);
-            message = "&message=" + URLEncoder.encode(message, UTF);
+            String encodedMessage = "&message=" + URLEncoder.encode(message, UTF);
             String sender = "&sender=" + URLEncoder.encode("TXTLCL", UTF);
             String numbers = "&numbers=" + URLEncoder.encode(number, UTF);
 
             // Send data
-            String data = "https://api.textlocal.in/send/?" + apiKey + numbers + message + sender;
+            String data = "https://api.textlocal.in/send/?" + apiKey + numbers + encodedMessage + sender;
             URL url = new URL(data);
             URLConnection conn = url.openConnection();
             conn.setDoOutput(true);
