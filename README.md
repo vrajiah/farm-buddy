@@ -1,8 +1,8 @@
 # Farm Buddy
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/19c2b5b570a54ff9b75e8bbb342faf80)](https://app.codacy.com/manual/vrajiah/farm-buddy?utm_source=github.com&utm_medium=referral&utm_content=vrajiah/farm-buddy&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/vrajiah/farm-buddy.svg?branch=master)](https://travis-ci.com/github/vrajiah/farm-buddy?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/vrajiah/farm-buddy/badge.svg?branch=master)](https://coveralls.io/github/vrajiah/farm-buddy?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vrajiah_farm-buddy&metric=alert_status)](https://sonarcloud.io/dashboard?id=vrajiah_farm-buddy)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d3f2ff62c1474bcabad601b9e4ea2c12)](https://www.codacy.com/manual/vrajiah/farm-buddy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vrajiah/farm-buddy&amp;utm_campaign=Badge_Grade)
 
 ## About Farm Buddy
 This project contains a simple solution that allows Farmers to use water efficiently on their farms.
