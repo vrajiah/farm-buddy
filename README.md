@@ -1,5 +1,7 @@
 # Farm Buddy
+[![Build Status](https://travis-ci.com/vrajiah/farm-buddy.svg?branch=master)](https://travis-ci.com/github/vrajiah/farm-buddy?branch=master)
 
+## About Farm Buddy
 This project contains a simple solution that allows Farmers to use water efficiently on their farms.
 
 When a harsh drought hit any region, access to water is limited. And, farmers tend to over (or) under utilize available water resulting in lesser yeilds.
